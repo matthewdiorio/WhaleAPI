@@ -11,11 +11,21 @@ router.get('/', async (req, res) => {
         res.status(500).json({message: err.message})
     }
 })
+//Get Random
+router.get('/random', async (req, res) => {
+    try{
+        const fact = await Fact.aggregate([{ $sample: { size: 1 } }])
+        res.send(fact)
+    } catch (err) {
+        res.status(500).json({message: err.message})
+    }
 
+})
 //GettingOne
-router.get('/:id', fact, (req, res) =>{
+router.get('/:id', getFact, (req, res) =>{
     res.send(res.fact)
 })
+
 
 //Creating one
 router.post('/', async (req, res) =>{
@@ -65,7 +75,7 @@ async function getFact(req, res, next){
             return res.status(404).json({message: 'Cannot find fact'})
         }
     } catch (err) {
-        return res.status(500).json({ message: 'err.message'})
+        return res.status(500).json({ message: err.message})
     }
     res.fact = fact
     next()

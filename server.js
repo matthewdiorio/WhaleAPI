@@ -12,6 +12,6 @@ db.once('open', (error) => console.log('Connected to Database'))
 app.use(express.json())
 
 const factsRouter = require('./routes/facts')
-app.use('/facts', factsRouter)
+app.use('/whalesharkfacts', factsRouter)
 
 app.listen(3000, () => console.log('Server has started'))

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const factScheme= new mongoose.Schema({
+const factSchema= new mongoose.Schema({
     fact:{
         type: String,
         required: true
@@ -16,4 +16,4 @@ const factScheme= new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('WhaleSharkFacts', subscriberSchema)
+module.exports = mongoose.model('WhaleSharkFacts', factSchema)
