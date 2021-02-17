@@ -1,1 +1,1 @@
-# WhaleAPI
+# WhaleSharkAPI
