@@ -1,11 +1,12 @@
-
 h1 {
   font-size: 55px;
+  
   color: #ffffff;
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 25px;
+  line-height: 29px;
   color: #ffffff;
 }
 
@@ -14,18 +15,10 @@ h3 {
   color: #231f20;
 }
 
-.supporting {
-  font-size: 21px;
-  line-height: 26px;
-  color: #ffffff;
-  font-weight: 400;
-}
-
 p {
-  font-size: 17px;
+  font-size: 20px;
   line-height: 22px;
-  color: #929496;
-  font-weight: 400;
+  color: #e0e0e0;
 }
 
 img {
@@ -116,7 +109,6 @@ html, body {
 }
 
 header {
-
   width: 100%;
   padding: 20px 10px 20px 10px;
   height: 100vh;
@@ -130,14 +122,14 @@ header {
 
 .header-info {
   position: absolute;
-  top: 35%;
+  top: 30%;
   width: 100%;
   left: 0;
   right: 0;
   z-index: 300;
   margin-left: 0px;
   margin-bottom: 12%;
-  text-align: left;
+  text-align:justify;
 }
 
 .header-animation {
@@ -145,7 +137,12 @@ header {
   right: -200px;
   top: 25%;
 }
-
+#random-button{  
+  margin: 0 auto;
+  width:30%;
+  margin:auto;
+  display:block;
+}
 .whale {
   position: absolute;
   width: auto;
@@ -218,7 +215,6 @@ header {
     transform: rotate(350deg);
   }
 }
-
 
 .pad-xl {
   padding: 200px 0px;
@@ -343,8 +339,6 @@ hr.line {
   -o-background-size: cover;
 }
 
-
-
 .project-info {
   position: fixed;
   display: none;
@@ -362,18 +356,17 @@ hr.line {
   z-index: 10;
 }
 
-.project-text{
-padding:25px;
+.project-text {
+  padding: 25px;
 }
-.project-info h2 {
-  padding:10px;
-  color: black;
 
+.project-info h2 {
+  padding: 10px;
+  color: black;
 }
 
 .project-info p {
   color: black;
-
 }
 
 .github-btn {
@@ -450,14 +443,18 @@ footer {
 /* Landscape phones and down */
 
 @media (max-width: 480px) {
-
   h1 {
-    font-size: 35pt;
+    font-size: 35px;
   }
-
+  h2 {
+    font-size: 15px;
+  }
+  p {
+    font-size: 12px;
+  }
   .header-info {
-    position: absolute;
-    top: 10%;
+    position:absolute;
+    top: 7% !important;
   }
   .whale {
     position: absolute;
@@ -467,33 +464,17 @@ footer {
     position: absolute;
     top: 55%;
   }
-  .btn-lg {
-    font-size: 12.5px;
-    line-height: 1.33;
-    padding: 16px 13px;
-    letter-spacing: 0px;
-  }
-  .btn-wide {
-    width: 100%;
-    font-size: 12.5px;
-    line-height: 1.33;
-    padding: 16px 13px;
-    letter-spacing: 0px;
-  }
 }
 
 /* Landscape phone to portrait tablet */
 
 @media (min-width: 481px) and (max-width: 767px) {
-  h1 {
-    font-size: 35pt;
-  }
   .name {
     left: 15px;
   }
   .header-info {
     position: absolute;
-    top: 10%;
+    top: 100%;
   }
   .whale {
     position: absolute;
@@ -511,6 +492,10 @@ footer {
 /* Portrait tablet to landscape and desktop */
 
 @media (min-width: 768px) and (max-width: 991px) {}
+.header-info {
+
+  top: 20%;
+}
 
 /* Desktops and laptops ----------- */
 
