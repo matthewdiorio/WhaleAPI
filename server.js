@@ -14,7 +14,7 @@ app.use(express.json())
 const factsRouter = require('./routes/facts')
 app.use('/whalesharkfacts', factsRouter)
 
-app.listen(3000, () => console.log('Server has started'))
+app.listen(process.env.PORT || 3000, () => console.log('Server has started'))
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(_dirname, "client", "index.html"));
