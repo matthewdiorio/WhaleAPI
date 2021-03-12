@@ -16,4 +16,4 @@ const factSchema= new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('WhaleSharkFacts', factSchema)
+module.exports = mongoose.model('facts', factSchema)
