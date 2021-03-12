@@ -8,11 +8,11 @@ wow = new WOW(
   }
 );
 wow.init();
-
 getNewFact();
 
+
 function getNewFact() {
-  axios('http://localhost:3000/whalesharkfacts/random')
+  axios('https://lit-hamlet-47243.herokuapp.com/whalesharkfacts/random')
 
   .then(function (response) {
 
