@@ -12,7 +12,7 @@ getNewFact();
 
 
 function getNewFact() {
-  axios('https://lit-hamlet-47243.herokuapp.com/whalesharkfacts/random')
+  axios('https://whalesharkapi.herokuapp.com/whalesharkfacts/random')
 
   .then(function (response) {
 
