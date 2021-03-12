@@ -16,8 +16,9 @@ app.use('/whalesharkfacts', factsRouter)
 
 app.listen(process.env.PORT || 3000, () => console.log('Server has started'))
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(_dirname, "client", "index.html"));
+
+app.get('/', function(req, res) {
+  res.sendFile(__dirname + '/client/index.html');
 });
 
 app.use(function(req, res, next) {
